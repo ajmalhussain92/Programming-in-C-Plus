@@ -2,30 +2,29 @@
 using namespace std;
 // Unary operator overloading using Friend function
 
-class Demo{
-    int a;
-    int b;
+class Demo {
+	private:
+	    int a;
+	    int b;
     
-public:
+	public:
     
-    //Parameterized constructor
-    Demo (int x, int y) : a(x), b(y){}
-   
-    friend void operator-(Demo &obj);
-    
-    void display(){
-        
-        cout<<"A : "<<a<<"\t B : "<<b<<endl;
-        
-    }
+	    //Parameterized constructor
+	    Demo (int x, int y) : a(x), b(y) {}
+	   
+	    friend void operator - (Demo &obj);
+	    
+	    void display() {
+	        cout << "A : " << a << "\t B : " << b << endl;
+	    }
 };
 
-void operator-(Demo &obj){
+void operator - (Demo &obj) {
         obj.a = -obj.a;
         obj.b = -obj.b;
 }
 
-int main(){
+int main() {
     Demo d1(-10, 70);
     
     // Before
@@ -33,7 +32,7 @@ int main(){
     
     -d1;
     
-    // Agter
+    // After
     d1.display();
     
     return 0;

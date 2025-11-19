@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// Constructor Overloading
+
 class Rectangle {
 private:
     int length;
@@ -13,13 +15,13 @@ public:
         width = 0;
     }
 
-    // Constructor with one argument (square)
+    // Constructor with one argument (for square)
     Rectangle(int side) {
         length = side;
         width = side;
     }
 
-    // Constructor with two arguments (rectangle)
+    // Constructor with two arguments (for rectangle)
     Rectangle(int l, int w) {
         length = l;
         width = w;

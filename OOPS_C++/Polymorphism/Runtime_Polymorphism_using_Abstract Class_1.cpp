@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-// Runtime_Polymorphism_using_Abstract Class
+// Runtime_Polymorphism_using_Abstract Class_1
 
 class Shape {
 	public:

@@ -37,7 +37,6 @@ int main () {
 	
 	a1 -> sound();
 	
-	
 	delete dog;
 	delete cat;
 	

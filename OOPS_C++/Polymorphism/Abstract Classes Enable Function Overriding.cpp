@@ -2,10 +2,10 @@
 //Abstract Classes Enable Function Overriding
 class Animal {
 public:
-    virtual void sound() = 0;  // Pure virtual function
-    virtual void move() = 0;   // Another pure virtual function
+    virtual void sound() = 0;  	// Pure virtual function
+    virtual void move() = 0;   	// Another pure virtual function
 
-    virtual ~Animal() {}  // Virtual destructor
+    virtual ~Animal() {}  		// Virtual destructor
 };
 
 class Dog : public Animal {
@@ -34,11 +34,11 @@ int main() {
     Animal* a1 = new Dog();
     Animal* a2 = new Bird();
 
-    a1->sound();  // Calls Dog's sound()
-    a1->move();   // Calls Dog's move()
+    a1 -> sound();  // Calls Dog's sound()
+    a1 -> move();   // Calls Dog's move()
 
-    a2->sound();  // Calls Bird's sound()
-    a2->move();   // Calls Bird's move()
+    a2 -> sound();  // Calls Bird's sound()
+    a2 -> move();   // Calls Bird's move()
 
     delete a1;
     delete a2;

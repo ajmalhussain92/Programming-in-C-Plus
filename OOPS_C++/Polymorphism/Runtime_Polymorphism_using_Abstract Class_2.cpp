@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-// Runtime_Polymorphism_using_Abstract Class2
+// Runtime_Polymorphism_using_Abstract Class_2
 
 class Shape {
 	public:

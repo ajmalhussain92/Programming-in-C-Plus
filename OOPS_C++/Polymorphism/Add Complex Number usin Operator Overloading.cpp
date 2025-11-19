@@ -2,7 +2,7 @@
 using namespace std;
 // Adding two complex numbers using operator overloading using Friend function
 
-class Complex{
+class Complex {
 	
 	float real, imag;
     
@@ -13,17 +13,17 @@ class Complex{
     Complex(float r, float i) : real(r), imag(i){}
     
     
-    friend Complex operator+(Complex &c1, Complex &c2);
+    friend Complex operator+ (Complex &c1, Complex &c2);
     
     void display(){
-        if(imag < 0)
-        cout<<real<<imag<<"i" <<endl;
+        if (imag < 0)
+        	cout << real << imag << "i" << endl;
         else
-        cout<<real <<"+"<<imag<<"i" <<endl;
+        	cout << real << "+" << imag << "i" << endl;
     }
 };
 
-Complex operator+(Complex &c1, Complex &c2){
+Complex operator+ (Complex &c1, Complex &c2) {
     Complex temp;
     
     temp.real = c1.real + c2.real; 

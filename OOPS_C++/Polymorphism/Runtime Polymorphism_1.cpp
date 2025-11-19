@@ -4,7 +4,7 @@ using namespace std;
 
 class Animal {
 	public:
-		virtual void sound () {			// i) virtual method
+		virtual void sound () {				// i) virtual method
 			cout << "Animal makes sound." << endl;
 		}
 };
@@ -16,7 +16,7 @@ class Dog : public Animal {
 		}
 };
 
-
+// Main program
 int main () {
 	
 	Animal* dog = new Dog();				// ii) parent pointer -> child object

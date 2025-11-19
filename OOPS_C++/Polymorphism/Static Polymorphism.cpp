@@ -5,22 +5,24 @@ using namespace std;
 class Print {
 public:
     void display(int i) {
-        std::cout << "Integer: " << i << std::endl;
+        cout << "Integer: " << i << endl;
     }
     
     void display(double d) {
-        std::cout << "Double: " << d << std::endl;
+        cout << "Double: " << d << endl;
     }
     
     void display(string s) {
-        std::cout << "String: " << s << std::endl;
+        cout << "String: " << s << endl;
     }
 };
 
 int main() {
+	
     Print p;
     p.display(5);             // Calls display(int)
     p.display(3.14);          // Calls display(double)
     p.display("Hello");       // Calls display(const std::string&)
+    
     return 0;
 }
