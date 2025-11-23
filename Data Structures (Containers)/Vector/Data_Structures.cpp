@@ -16,6 +16,6 @@ int main() {
 		 << "Adding and removing of elements are usually done at the end. "
 		 << "Elements can be accessed by index.";
 	
-
+	return 0;
 }
 
