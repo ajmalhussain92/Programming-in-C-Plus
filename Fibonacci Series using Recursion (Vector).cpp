@@ -3,8 +3,11 @@
 
 using namespace std;
 
-// Fibonacci Series using Recursion
-// This is pure recursion — NOT DP.
+// Generate full Fibonacci Series upto n-th term using Simple Recursion (Pure Recursion)
+// Simple Recursion = You compute every subproblem again and again without storing results.
+// This is a Top-Down approach without Memoization.
+// This is a single chain of recursive calls, not a branching binary tree.
+// This is NOT Dynamic Programming (DP).
 
 vector<int> fibonacci_recursive(int n) {
     if (n == 1) return {0};
@@ -29,9 +32,11 @@ int main () {
     
     vector<int> Series = fibonacci_recursive(n);
 
-    for (int x : Series) {
+    for (int x : Series) 
     	cout << x << " ";
-	}
 	
 	return 0;
 }
+
+// Time Complexity = O(n)
+// Space Complexity = O(n)
