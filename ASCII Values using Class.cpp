@@ -3,12 +3,14 @@ using namespace std;
 //Program to print all ASCII value
 
 class ASCII{
-    char ch;
+    
+	char ch;
     
     public:
     void show(){
+    	cout << "Character\tASCII\n";
         for(int i=0; i<=255; i++){
-        cout <<" "<< (char)i<< i;
+        cout <<(char)i<< "\t\t" << i << endl;
         }
     }
 };

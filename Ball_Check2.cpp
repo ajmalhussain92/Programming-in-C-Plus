@@ -1,28 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int find(int balls[], int len){
+int find(int arr[], int len){
 	
 	for (int i=0; i<len; i++){
-		if (i!=len){
-			if (balls[i]>balls[i+1]){ 
-				return balls[i];
-			}
-		} else {
-			if (balls[i]==balls[i-1])	return -1;
-//			else if (balls[i+1]>balls[i])	return i+1;
-			else return balls[i];
-		}
+		if (arr[i] > arr[i+1])
+			return i;
 	}
+	return -1;
 }
 int main () {
 	
-	int balls[9] = {1,1,1,1,1,1,1,1,1};
+	int arr[9] = {1,1,1,1,1,1,1,1,1};
 	
-	int res = find (balls, 9);
+	int idx = find (arr, 9);
 	
-	if (res != -1)
-		cout << "The odd ball: " << res;
+	if (idx != -1)
+		cout << "The odd ball: " << arr[idx];
 	else 
 		cout << "All balls are equal! ";
 	

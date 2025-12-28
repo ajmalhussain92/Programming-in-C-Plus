@@ -13,7 +13,7 @@ int main () {
 	
 	// Descending
 	sort (v.begin(), v.end(), greater<int>());
-	for (int i: v) cout << i << " ";		// Output: 9 5 2 1 
+	for (int i : v) cout << i << " ";		// Output: 9 5 2 1 
 }
 
 /*

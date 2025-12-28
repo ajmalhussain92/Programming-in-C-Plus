@@ -11,15 +11,11 @@ int main() {
   		cout << i << "\n";
 	}
 	
-	for (int i=2; i<=1000; i=i+2) {
-		cout << i << " ";
-	}
-	
 	return 0;
 }
 
 /*
 for (type variableName : arrayName) {
-  // code block to be executed
+  		// code block to be executed
 }
 */

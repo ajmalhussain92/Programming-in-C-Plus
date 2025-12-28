@@ -2,47 +2,47 @@
 using namespace std;
 
 
-int find(int balls[]){
-	int a = balls[0]+balls[1]+balls[2];
-	int b = balls[3]+balls[4]+balls[5];
-	int c = balls[6]+balls[7]+balls[8];
+int find(int arr[]){
+	int a = arr[0]+arr[1]+arr[2];
+	int b = arr[3]+arr[4]+arr[5];
+	int c = arr[6]+arr[7]+arr[8];
 	
 	if (a==b) {
-		if (balls[6]>balls[7]) {
-			return balls[6];
-		}else if (balls[7]>balls[6]){
-			return balls[7];
-		}else {
-			return balls[8];
+		if (arr[6]>arr[7]) {
+			return 6;
+		}else if (arr[7]>arr[6]){
+			return 7;
+		}else if (arr[8] > arr[7]){
+			return 8;					// Check last index, if there is an odd ball
 		}
 	} else if (a>b) {
-		if (balls[0]>balls[1]) {
-			return balls[0];
-		} else if (balls[1]>balls[0]){
-			return balls[1];
+		if (arr[0]>arr[1]) {
+			return 0;
+		} else if (arr[1]>arr[0]){
+			return 1;
 		}else {
-			return balls[2];
+			return 2;
 		}
 	}else if (b>a){
-		if (balls[3]>balls[4]){
-			return balls[3];
-		}else if (balls[4]>balls[3]){
-			return balls[4];
+		if (arr[3]>arr[4]){
+			return 3;
+		}else if (arr[4]>arr[3]){
+			return 4;
 		}else {
-			return balls[5];
+			return 5;
 		}
-	}else {
-		return -1;
 	}
+	return -1;
 }
+
 int main () {
 	
-	int balls[9] = {1,1,1,1,1,1,1,1,7};
+	int arr[9] = {1,1,1,1,1,1,1,1,1};
 	
-	int res = find (balls);
+	int idx = find (arr);
 	
-	if (res != -1)
-		cout << "The odd ball: " << res;
+	if (idx != -1)
+		cout << "The odd ball: " << arr[idx];
 	else 
 		cout << "All balls are equal! ";
 	

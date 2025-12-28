@@ -1,42 +1,65 @@
 #include <iostream>
+#include <stdexcept> // For standard exceptions
+#include <string>
 using namespace std;
 
-int main() {
-    char operation;
-    double num1, num2;
-
-    // Prompt user for input
-    cout << "Enter first number: ";
-    cin >> num1;
-
-    cout << "Enter an operator (+, -, *, /): ";
-    cin >> operation;
-
-    cout << "Enter second number: ";
-    cin >> num2;
-
-    // Perform the specified operation
-    switch (operation) {
-        case '+':
-            cout << "Result: " << num1 << " + " << num2 << " = " << num1 + num2 << endl;
-            break;
-        case '-':
-            cout << "Result: " << num1 << " - " << num2 << " = " << num1 - num2 << endl;
-            break;
-        case '*':
-            cout << "Result: " << num1 << " * " << num2 << " = " << num1 * num2 << endl;
-            break;
-        case '/':
-            // Handle division by zero
-            if (num2 != 0) {
-                cout << "Result: " << num1 << " / " << num2 << " = " << num1 / num2 << endl;
-            } else {
-                cout << "Error: Division by zero is not allowed." << endl;
-            }
-            break;
-        default:
-            cout << "Error: Invalid operator." << endl;
-    }
-
-    return 0;
-}
+int main () { 
+	
+	double num1, num2;
+	string str;
+	char myOperator;
+	
+	try {
+		cout << "Enter 1st no.: ";
+		cin >> num1; 
+		cin.ignore();          								// remove leftover '\n'
+		
+		cout << "Enter Operator (+, -, *, /): ";
+		getline (cin, str);									// reads full string
+		
+		
+		if (!str.empty()) { 
+			myOperator = str[0];
+		} else {
+        	cout << "No operator provided!" << endl;
+    	} 
+		
+		cout << "Enter 2nd no.: ";
+		cin >> num2;
+		
+		double result;
+		
+		switch (myOperator) {
+			case '+':
+				result = num1 + num2;
+				break;
+				
+			case '-':
+				result = num1 - num2;
+				break;
+				
+			case '*':
+				result = num1 * num2;
+				break;
+			
+			case '/':
+				if (num2 == 0) throw runtime_error ("Cannot divide by zero!");
+				
+				result = num1 / num2;
+				break;
+				
+			default:
+			    throw invalid_argument ("Invalid operator! Use +, -, *, or /.");
+		}
+		
+		cout << "Result: " << result;
+		
+	} catch (const exception &e) { 
+		
+		cout << "Error: " << e.what();
+	} catch (...) {
+	    cout << "Unknown error occurred!" << endl;
+	} 
+	
+	return 0;
+} 

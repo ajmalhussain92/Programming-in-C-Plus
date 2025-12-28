@@ -12,7 +12,8 @@ class ASCII{
     }
     
     void output(){
-        cout<<"ASCII value of "<<ch <<": "<<(int)ch;
+        cout<<"ASCII value for the character '"<< ch <<"' is: " << (int)ch <<endl;
+//        cout<<"ASCII value for the character '"<< ch <<"' is: " << static_cast<int>(ch) <<endl;
     }
 };
 
