@@ -3,31 +3,31 @@
 using namespace std;
 //Binary to Decimal Conversion
 
-void binaryToDec(int number){
+void binaryToDec (int number) {
     
-    int decimalNum = 0, lastDig, twozPow = 0;
+    int decimalNum = 0, lastDig, pwr = 0;
     
-    while(number != 0){
+    while (number != 0) {
         
-        lastDig = number%10;
+        lastDig = number % 10;
         
-        decimalNum += lastDig * pow(2, twozPow);
+        decimalNum += lastDig * pow (2, pwr);
         
-        number/=10;
-        twozPow++;
+        number /= 10;
+        pwr++;
     }
     
     cout << "Decimal Number: " << decimalNum;
 }
 
-int main() {
+int main () {
     
     int binaryNum;
     
     cout << "Enter the Binary number: ";
     cin >> binaryNum;
     
-    binaryToDec(binaryNum);
+    binaryToDec (binaryNum);
     
     return 0;
 }

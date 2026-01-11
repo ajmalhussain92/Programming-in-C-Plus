@@ -8,7 +8,7 @@ int main(){
     
     //vectors can be iterated by all loops
     
-    vector<int> vec2(5, 2);
+    vector<int> vec2 (5, 2);
     
     cout<<"Vector1: ";
     for(int i=0; i<4; i++){
@@ -27,5 +27,10 @@ int main(){
     vec1.push_back(20);
     
     cout<<vec1.size() << endl;
+    
+    nums.insert (nums.begin() + 0, 90);
+    
+    // 	vector<int>::iterator it = nums.begin();
+//     cout << *it;
     return 0;
 }

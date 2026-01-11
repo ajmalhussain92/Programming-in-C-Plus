@@ -1,9 +1,13 @@
 #include<stdio.h>
 #define SIZE 4
+
+// Stack using array
 int arr[SIZE],top=-1;
+
 void push();
 void pop();
 void stack();
+
 int main(){
     int option;
     do{

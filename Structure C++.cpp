@@ -1,35 +1,61 @@
 #include<iostream>
-// Structure in C++
 using namespace std;
 
-//One Structure & multiple variables
-struct{
+// Structure in C++
+// 1. Anonymous Struct with a Typedef Alias
+
+struct {
 	string brand;
-	float price;
-	bool isDeal;
-}pen1,pen2,pen3;
+	string model;
+  	int year;
+} Car;
+
+struct m {
+  	int myNum;
+  	string myString;
+} myStruct1, myStruct2, myStruct3; // Multiple structure variables separated with commas
 
 
-//named structure  (means as a Data Type)
-struct student{
-	string name;
-	int age;
+// 2. Named Struct Definition
+
+struct Student {
+  	string name;
+  	int id;
+  	char grade;
 };
 
-int main(){
-	//pen 1
-	pen1.brand="link";
-	pen1.price=6.4;
-	pen1.isDeal=true;
-	//pen 2
-	pen1.brand="race";
-	pen1.price=34;
-	pen1.isDeal=true;
-	cout<<pen1.isDeal<<endl;
+
+// 3. Named Struct with Two variables of that type
+struct Person {
+    string name;
+    int id;
+    char grade;
+} Person1, Person2;
+
+
+
+int main () {
 	
-	student s1;
-	s1.name="rahul";
-	s1.age=39;
-	cout<<"name: "<<s1.name<<" "<<"Age: "<<s1.age<<endl;
+	
 	return 0;
 }
+
+/* Notes:
+	
+	1. Anonymous Struct with a Typedef Alias
+	
+		Declares an anonymous struct (no name after struct).
+		
+		Creates a variable named Student of that anonymous struct type.
+		
+		Student is a variable, not a type.
+
+	
+	2. Named Struct Definition
+	
+		Declares a struct type named struct Student.
+
+		You can create multiple variables of type struct Student
+
+
+*/

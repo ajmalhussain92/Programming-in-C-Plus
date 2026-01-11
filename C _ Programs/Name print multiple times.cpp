@@ -3,21 +3,21 @@
 void prt(int k, char str[]){
 	for(int i=1; i<=k; i++){
 	
-	printf("%s\n",str);
+	printf("%s ", str);
    }
 }
-//take name,amount as user input & print multiple times
-int main(){
+
+int main () {
 	char name[20];
 	int n;
 	
-	printf("name: ");
-	scanf("%[^\n]s",name);
+	printf ("name: ");
+	scanf ("%[^\n]s", name);
 	
-	printf("amount: ");
-	scanf("%d",&n);
+	printf ("amount: ");
+	scanf ("%d", &n);
 	
-	prt(n,name);
+	prt (n, name);
 	
 	return 0;
 }

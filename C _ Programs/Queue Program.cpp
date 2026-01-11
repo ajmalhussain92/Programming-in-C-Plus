@@ -1,6 +1,6 @@
 #include<stdio.h>
 #define SIZE 4
-//Queue Program_Enqueue,Dequeue Operation
+//Queue using array
 int arr[SIZE],front=-1,rear=-1;
 void EnQueue();
 void DeQueue();
