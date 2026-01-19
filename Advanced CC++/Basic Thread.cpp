@@ -2,12 +2,11 @@
 #include <thread>
 using namespace std;
 
-void myFunction () {
-	cout << "Hello, World!\n";
-}
+int counter = 0;
 
-void threadFunction(int id) {
-	cout << "Thread " << id << " is running.\n";
+void greet () {
+	cout << "Hello, World!\n";
+	cout << ++counter << endl;
 }
 
 int main () {
@@ -15,15 +14,25 @@ int main () {
 	cout << "Look & observe some unconditional behavior\n";
 	cout << "----------------------------------------------------------\n\n";
 	
-	// Create threads
-	thread t1 (myFunction);
-	thread t2 (threadFunction, 5);
+	// Create threads	(Two threads accessing two same shared resources)
+	thread t1 (greet);
+	thread t2 (greet);
 
 
 	// Always call .join() or .detach()
 	t1.join ();
-	t2.detach ();
+	t2.join ();
 
 
 	return 0;
 }
+
+
+/*
+
+This program actually has two unsynchronized shared resources:
+
+	counter
+	std::cout
+
+*/

@@ -2,21 +2,25 @@
 using namespace std;
 
 // Structure in C++
-// 1. Anonymous Struct with a Typedef Alias
+// 1. Anonymous Struct with a Variable
 
-struct {
+struct {							// The struct has NO name
 	string brand;
 	string model;
   	int year;
-} Car;
-
-struct m {
-  	int myNum;
-  	string myString;
-} myStruct1, myStruct2, myStruct3; // Multiple structure variables separated with commas
+} Car;								// You cannot create another variable of the same structure later
 
 
-// 2. Named Struct Definition
+// 2. Anonymous Struct with Multiple Variables (struct Person { ... } Person1, Person2;)
+
+struct Person {
+    string name;
+    int id;
+    char grade;
+} Person1, Person2;
+
+
+// 3. Named Struct Definition
 
 struct Student {
   	string name;
@@ -25,37 +29,51 @@ struct Student {
 };
 
 
-// 3. Named Struct with Two variables of that type
-struct Person {
-    string name;
-    int id;
-    char grade;
-} Person1, Person2;
-
-
-
 int main () {
-	
 	
 	return 0;
 }
 
 /* Notes:
 	
-	1. Anonymous Struct with a Typedef Alias
+	1. Anonymous Struct with a Variable
 	
-		Declares an anonymous struct (no name after struct).
+		The struct has NO name
+		I need a one-time structure, I don’t care about reuse.
+		You cannot create another variable of the same structure later
+		You create ONE variable 'Car' immediately.
 		
-		Creates a variable named Student of that anonymous struct type.
+		Purpose:
+			Quick, single-use data grouping.
+			Useful for small, local, or temporary data.
 		
-		Student is a variable, not a type.
-
+		
+	2. Anonymous Struct with Multiple Variables
 	
-	2. Named Struct Definition
+		Struct HAS a name (Person)
+		You can create more variables later.
+		Define structure + create some objects right now.
+		Both type and variables are created
+		
+		Purpose:
+			When you already know some objects are needed.
+			Reduces repetitive declarations.
+			
+			
 	
-		Declares a struct type named struct Student.
+	3. Named Struct Definition Only (struct Student)
+	
+		Only a type definition.
+		No variables created yet.
+		Pure blueprint.
+		You create variables later.
+		I’m defining a data model.
 
-		You can create multiple variables of type struct Student
+		Purpose:
+			Most common & professional approach.
+			Reusable
+			Clean design
+			Best for large programs
 
 
 */

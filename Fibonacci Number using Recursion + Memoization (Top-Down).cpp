@@ -6,12 +6,12 @@ using namespace std;
 // This is a Recursion + Dynamic Programming (DP).
 
 // Memoization (Store results)
-int dp[100];			// No of Dimension = No of Parameters Passed (changeable Param)
+long long dp[100];			// No of Dimension = No of Parameters Passed (changeable Param)
 
-int fib (int n) {
+long long fib (int n) {
 	
-	if (n == 1 || n == 2)
-		return 1;
+	if (n == 0) return 0;
+	if (n == 1 || n == 2) return 1;
 	
 	if (dp[n] != -1)
 		return dp[n];
@@ -27,7 +27,7 @@ int main () {
     cout << "Enter n: ";
     cin >> n;
     
-    int fib_num = fib(n);
+    long long fib_num = fib(n);
     
 	cout << "Fibonacci Number: " << fib_num;
 	
