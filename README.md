@@ -1,8 +1,4 @@
 # Programming-in-C-Plus
-```cpp
----
-## I Like Clean code
----
 # 2D Arrays in C++
 
 A **2D array** is like a table (matrix) with rows and columns.
